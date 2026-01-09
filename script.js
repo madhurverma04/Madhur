@@ -2,6 +2,11 @@
 // PORTFOLIO JAVASCRIPT - RESPONSIVE
 // ============================================
 
+// Initialize EmailJS
+(function(){
+    emailjs.init("kMY2qr4I7XyaJSoES");
+})();
+
 // Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
@@ -61,12 +66,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Simple form submission handler
+    // EmailJS form submission handler
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! This is a demo form.');
+
+            // Get form data
+            const formData = {
+                user_name: this.querySelector('input[type="text"]').value,
+                user_email: this.querySelector('input[type="email"]').value,
+                subject: this.querySelectorAll('input[type="text"]')[1].value,
+                message: this.querySelector('textarea').value
+            };
+
+            // Send email using EmailJS
+            emailjs.send('service_4jc0lso', '__ejs-test-mail-service__', formData)
+                .then(function(response) {
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset(); // Clear the form
+                    console.log('Email sent successfully:', response);
+                }, function(error) {
+                    alert('Sorry, there was an error sending your message. Please try again later.');
+                    console.error('EmailJS error details:', error);
+                    console.error('Error status:', error.status);
+                    console.error('Error text:', error.text);
+                });
         });
     }
 
