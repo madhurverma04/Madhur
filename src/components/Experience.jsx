@@ -7,6 +7,19 @@ const Experience = () => {
                 <h2 className="section-title">Experience</h2>
                 <div className="timeline">
                     <div className="timeline-item">
+                        <div className="timeline-date">- - Jan 2026 – Present</div>
+                        <div className="timeline-content">
+                            <h3>Data Analyst Intern</h3>
+                            <h4>Decoded Data Academy</h4>
+                            <ul>
+                                <li>Performed data quality assessment and automated exploratory data analysis (EDA) using Python libraries such as Pandas, NumPy, and ydata-profiling to identify inconsistencies and missing values.</li>
+                                <li>Analyzed data drift and distribution changes by comparing historical and current datasets using Evidently AI, SQL queries, and statistical summaries to support data reliability.</li>
+                                <li>Developed analytical pipelines using Python and SQL to compute deterministic performance metrics, aggregate KPIs, and generate consolidated analytical reports from multiple data sources.</li>
+                                <li>Created data-driven evaluation benchmarks by designing structured datasets, building reproducible analytical workflows with controlled random seeding (PCG64), and validating results using Excel-based analysis and Power BI dashboards for trend visualisation and insight generation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="timeline-item">
                         <div className="timeline-date">- - Dec 2024 - Jan 2025</div>
                         <div className="timeline-content">
                             <h3>Frontend Developer Intern</h3>
@@ -26,6 +39,7 @@ const Experience = () => {
                                     devices.</li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </div>

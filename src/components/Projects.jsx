@@ -13,7 +13,9 @@ const Projects = () => {
             title: "Forest Fire Prediction System",
             description: "The AI-based forest fire prediction system leverages machine learning to analyze environmental data, enabling early warnings for proactive wildfire management.",
             tech: ["Python", "Jupyter", "resterio", "tqdm", "ml"],
-            links: { code: "https://github.com/madhurverma04/Forest-Fire-Prediction-System.git", demo: "#" },
+            links: { 
+                code: "https://github.com/madhurverma04/Forest-Fire-Prediction-System.git", 
+                demo: "#" },
             icon: "fas fa-robot"
         },
         {

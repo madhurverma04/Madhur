@@ -42,7 +42,7 @@ const Skills = () => {
                         <div className="skill-items">
                             <span className="skill-item">Git/Github</span>
                             <span className="skill-item">Canva</span>
-                            <span className="skill-item">Excell</span>
+                            <span className="skill-item">Excel</span>
                         </div>
                     </div>
                 </div>
