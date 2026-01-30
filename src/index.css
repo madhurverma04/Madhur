@@ -267,9 +267,9 @@ p {
 }
 
 .hero-title {
-    font-size: 100px;
+    font-size: 130px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
 }
 
 .highlight {
@@ -288,9 +288,8 @@ p {
     -webkit-text-fill-color: transparent;
     animation: text-flow 3s linear infinite;
     display: inline-block;
-    font-family: 'Outfit', sans-serif;
-    /* Modern, stylish geometric sans */
-    font-weight: 800;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
     /* Extra bold */
     letter-spacing: -2px;
     /* Tight spacing for modern look */
@@ -308,7 +307,7 @@ p {
 }
 
 .hero-subtitle {
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 16px;
     opacity: 0.9;
     color: #f3f4f6;
@@ -390,9 +389,18 @@ p {
 
 .section-title {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 48px;
-    color: var(--text-main);
+    font-size: 40px;
+    margin-bottom: 60px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--accent-color), #ffffff, var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--accent-color);
+    /* Fallback */
+    display: inline-block;
+    width: 100%;
 }
 
 .about-content {
@@ -487,53 +495,39 @@ p {
     border-left: 3px solid var(--accent-color);
 }
 
-.skills-horizontal-section {
-    position: relative;
-    /* Increased height for smoother, slower scroll */
-    height: 500vh;
+
+/* Skills Section - Vertical Layout */
+.skills-section {
+    padding: 60px 0;
+    /* Reduced top/bottom padding */
+    background-color: var(--bg-secondary);
 }
 
-.sticky-wrapper {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Center content vertically in viewport */
-    overflow: hidden;
-}
-
-.horizontal-overflow-hidden {
-    overflow: hidden;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    /* Reduced gap */
     width: 100%;
-}
-.skills-horizontal-track {
-    display: flex;
-    gap: 80px;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    /* Reduced to remove extra space */
-    width: max-content;
-    /* Ensure container respects full width of children */
 }
 
 .skill-card-large {
-    min-width: 1000px;
-    /* Increased width */
-    height: 70vh;
-    /* Increased height */
+    width: 100%;
+    /* Full width of grid cell */
+    padding: 40px 30px;
+    /* Reduced padding */
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 40px;
-    padding: 80px;
+    border-radius: 30px;
+    /* Slightly smaller radius */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    min-height: 280px;
+    /* Ensure consistent height */
 }
 
 .skill-card-large:hover {
@@ -542,34 +536,64 @@ p {
 }
 
 .card-title {
-    font-size: 48px;
-    margin-bottom: 60px;
+    font-size: 32px;
+    /* Reduced from 48px */
+    margin-bottom: 30px;
+    /* Reduced margin */
     color: var(--text-light);
-    border-bottom: 4px solid var(--accent-color);
-    padding-bottom: 20px;
+    border-bottom: 3px solid var(--accent-color);
+    /* Thinner border */
+    padding-bottom: 15px;
 }
+
 
 .card-content {
     display: flex;
-    gap: 40px;
+    gap: 25px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+.skill-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 .large-icon {
-    font-size: 100px;
+    font-size: 50px;
     color: var(--text-muted);
     transition: all 0.3s ease;
     filter: grayscale(100%);
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
-.large-icon:hover {
+.skill-name {
+    font-size: 16px;
+    color: var(--text-main);
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: -30px;
+    white-space: nowrap;
+}
+
+.skill-item:hover .large-icon {
     filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.2);
-    /* Colors are applied inline in JSX, specific to each icon */
 }
+
+.skill-item:hover .skill-name {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 /* Projects Section - Fixed grid */
 .projects {

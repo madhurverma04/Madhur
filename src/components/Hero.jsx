@@ -30,6 +30,9 @@ const Hero = () => {
                         <Link to="contact" smooth={true} duration={500} className="btn btn-secondary">
                             Get In Touch
                         </Link>
+                        <a href="/ResumePdf/Madhur_Data_Analyst.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                            My Resume
+                        </a>
                     </div>
                 </div>
 
