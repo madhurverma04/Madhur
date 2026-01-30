@@ -12,7 +12,7 @@ const About = () => {
                     <div className="about-text">
                         <p>
                             I'm a Computer Science Engineering student specialization in Artificial Intelligence and Machine
-                            Learning, skilled in Development, with a strong ability to work efficiently, and a deep
+                            Learning, skilled in Data Analytics & Web Development, with a strong ability to work efficiently, and a deep
                             commitment to delivering outstanding results in fast-paced environments. A highly adaptable
                             and innovative team player with great problem-solving and leadership skills,focused on achieving
                             organizational objectives and fostering collaboration.
